@@ -3,7 +3,7 @@
 // @namespace    https://github.com/wc0805/user-scripts
 // @version      1.6
 // @description  네이버 블로그, 뉴스, 모바일 등에서 복사 제한 해제 + 모바일 터치 최적화
-// @author       Anonymous
+// @author       wc0805
 // @match        *://*.naver.com/*
 // @match        *://*.blog.naver.com/*
 // @match        *://*.m.blog.naver.com/*
