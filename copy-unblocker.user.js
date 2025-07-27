@@ -1,4 +1,33 @@
-// ==UserScript==
+// // ==UserScript==
+// @name         Copy Unblocker (Naver + Mobile)
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Naver 등 모바일 웹에서 복사 방지 해제
+// @match        *://*/*
+// @updateURL    https://raw.githubusercontent.com/wc0805/-/main/copy-unblocker.user.js
+// @downloadURL  https://raw.githubusercontent.com/wc0805/-/main/copy-unblocker.user.js
+// @grant        none
+// ==/UserScript==
+
+(function () {
+    'use strict';
+    document.addEventListener('DOMContentLoaded', function () {
+        const tags = ['body', '*'];
+        tags.forEach(tag => {
+            const elems = document.querySelectorAll(tag);
+            elems.forEach(el => {
+                el.oncontextmenu = null;
+                el.onselectstart = null;
+                el.onmousedown = null;
+                el.oncopy = null;
+                el.style.userSelect = 'auto';
+                el.style.webkitUserSelect = 'auto';
+                el.style.msUserSelect = 'auto';
+                el.style.pointerEvents = 'auto';
+            });
+        });
+    });
+})();==UserScript==
 // @name         Copy Unblocker (Naver + Mobile)
 // @namespace    https://github.com/wc0805/user-scripts
 // @version      1.6
